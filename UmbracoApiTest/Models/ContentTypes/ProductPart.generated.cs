@@ -46,10 +46,66 @@ namespace UmbracoApiTest.Models.ContentTypes
 		// properties
 
 		///<summary>
+		/// Allergens: Any allergens that this product part may have
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("allergens")]
+		public IEnumerable<IPublishedContent> Allergens => this.Value<IEnumerable<IPublishedContent>>("allergens");
+
+		///<summary>
+		/// Calories
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("calories")]
+		public int Calories => this.Value<int>("calories");
+
+		///<summary>
+		/// Carbohydrates
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("carbohydrates")]
+		public int Carbohydrates => this.Value<int>("carbohydrates");
+
+		///<summary>
+		/// Fat
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("fat")]
+		public int Fat => this.Value<int>("fat");
+
+		///<summary>
+		/// Fibers
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("fibers")]
+		public int Fibers => this.Value<int>("fibers");
+
+		///<summary>
 		/// Ingredients
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("ingredients")]
-		public IPublishedContent Ingredients => this.Value<IPublishedContent>("ingredients");
+		public IHtmlString Ingredients => this.Value<IHtmlString>("ingredients");
+
+		///<summary>
+		/// Protein
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("protein")]
+		public int Protein => this.Value<int>("protein");
+
+		///<summary>
+		/// Salt
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("salt")]
+		public int Salt => this.Value<int>("salt");
+
+		///<summary>
+		/// Weight: Weight in grams
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("weight")]
+		public int Weight => this.Value<int>("weight");
 	}
 }

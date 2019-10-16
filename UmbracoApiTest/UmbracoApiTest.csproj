@@ -426,7 +426,6 @@
     <Compile Include="Models\ContentTypes\File.generated.cs" />
     <Compile Include="Models\ContentTypes\Folder.generated.cs" />
     <Compile Include="Models\ContentTypes\Image.generated.cs" />
-    <Compile Include="Models\ContentTypes\Ingredient.generated.cs" />
     <Compile Include="Models\ContentTypes\Member.generated.cs" />
     <Compile Include="Models\ContentTypes\Product.generated.cs" />
     <Compile Include="Models\ContentTypes\ProductPart.generated.cs" />
