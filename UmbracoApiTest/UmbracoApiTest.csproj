@@ -422,6 +422,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ContentTypes\Allergen.generated.cs" />
+    <Compile Include="Models\ContentTypes\File.generated.cs" />
+    <Compile Include="Models\ContentTypes\Folder.generated.cs" />
+    <Compile Include="Models\ContentTypes\Image.generated.cs" />
+    <Compile Include="Models\ContentTypes\Ingredient.generated.cs" />
+    <Compile Include="Models\ContentTypes\Member.generated.cs" />
+    <Compile Include="Models\ContentTypes\Product.generated.cs" />
+    <Compile Include="Models\ContentTypes\ProductPart.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -458,9 +466,7 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\ContentTypes\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
