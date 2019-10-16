@@ -65,12 +65,5 @@ namespace UmbracoApiTest.Models.ContentTypes
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("productParts")]
 		public IPublishedContent ProductParts => this.Value<IPublishedContent>("productParts");
-
-		///<summary>
-		/// Title: The name of the product
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
 	}
 }

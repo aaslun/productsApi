@@ -44,12 +44,5 @@ namespace UmbracoApiTest.Models.ContentTypes
 		{ }
 
 		// properties
-
-		///<summary>
-		/// Title: The name of the allergen
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
 	}
 }
