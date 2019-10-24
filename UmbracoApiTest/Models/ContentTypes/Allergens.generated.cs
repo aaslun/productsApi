@@ -44,12 +44,5 @@ namespace UmbracoApiTest.Models.ContentTypes
 		{ }
 
 		// properties
-
-		///<summary>
-		/// Test
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("test")]
-		public string Test => this.Value<string>("test");
 	}
 }

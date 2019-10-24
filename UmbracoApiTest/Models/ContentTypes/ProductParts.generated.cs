@@ -44,5 +44,12 @@ namespace UmbracoApiTest.Models.ContentTypes
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("heading")]
+		public string Heading => this.Value<string>("heading");
 	}
 }

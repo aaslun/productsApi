@@ -419,16 +419,21 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ContentTypes\Allergen.generated.cs" />
+    <Compile Include="Models\ContentTypes\Allergens.generated.cs" />
     <Compile Include="Models\ContentTypes\File.generated.cs" />
     <Compile Include="Models\ContentTypes\Folder.generated.cs" />
     <Compile Include="Models\ContentTypes\Image.generated.cs" />
     <Compile Include="Models\ContentTypes\Member.generated.cs" />
     <Compile Include="Models\ContentTypes\Product.generated.cs" />
     <Compile Include="Models\ContentTypes\ProductPart.generated.cs" />
+    <Compile Include="Models\ContentTypes\ProductParts.generated.cs" />
+    <Compile Include="Models\ContentTypes\Products.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

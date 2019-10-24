@@ -60,10 +60,10 @@ namespace UmbracoApiTest.Models.ContentTypes
 		public IPublishedContent Image => this.Value<IPublishedContent>("image");
 
 		///<summary>
-		/// Product parts: The parts that the product consists of
+		/// Product parts: Product parts that the product consists of
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("productParts")]
-		public IPublishedContent ProductParts => this.Value<IPublishedContent>("productParts");
+		public IEnumerable<IPublishedContent> ProductParts => this.Value<IEnumerable<IPublishedContent>>("productParts");
 	}
 }
