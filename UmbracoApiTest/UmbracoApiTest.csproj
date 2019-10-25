@@ -424,16 +424,27 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\ApiConfigurationAttribute.cs" />
+    <Compile Include="Composing\WebApiComponent.cs" />
+    <Compile Include="Composing\MappingComposer.cs" />
+    <Compile Include="Composing\WebApiComposer.cs" />
+    <Compile Include="Composing\ServiceComposer.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Mappings\ProductDefinition.cs" />
     <Compile Include="Models\ContentTypes\Allergen.generated.cs" />
     <Compile Include="Models\ContentTypes\Allergens.generated.cs" />
     <Compile Include="Models\ContentTypes\File.generated.cs" />
     <Compile Include="Models\ContentTypes\Folder.generated.cs" />
     <Compile Include="Models\ContentTypes\Image.generated.cs" />
+    <Compile Include="Models\ContentTypes\MaxProductApi.generated.cs" />
     <Compile Include="Models\ContentTypes\Member.generated.cs" />
     <Compile Include="Models\ContentTypes\Product.generated.cs" />
     <Compile Include="Models\ContentTypes\ProductPart.generated.cs" />
     <Compile Include="Models\ContentTypes\ProductParts.generated.cs" />
     <Compile Include="Models\ContentTypes\Products.generated.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductSparse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -470,7 +481,9 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Products\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
