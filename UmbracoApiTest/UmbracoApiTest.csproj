@@ -446,6 +446,8 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductSparse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IProductService.cs" />
+    <Compile Include="Services\ProductService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\imageprocessor\security.config" />

@@ -1,67 +1,37 @@
-﻿using System.Linq;
-using System.Web.Http;
-using Umbraco.Core.Mapping;
-using Umbraco.Web;
-using UmbracoApiTest.Models;
+﻿using System.Web.Http;
+using UmbracoApiTest.Services;
 
 namespace UmbracoApiTest.Controllers
 {
     [RoutePrefix("api/products")]
     public class ProductsController : BaseController
     {
-        private readonly UmbracoMapper _umbracoMapper;
-        private readonly IUmbracoContextFactory _umbracoContextFactory;
+        private readonly IProductService _productService;
 
-        public ProductsController(IUmbracoContextFactory umbracoContextFactory, UmbracoMapper umbracoMapper)
+        public ProductsController(IProductService productService)
         {
-            _umbracoMapper = umbracoMapper;
-            _umbracoContextFactory = umbracoContextFactory;
+            _productService = productService;
         }
 
-        /// <summary>
-        /// Get all products.
-        /// </summary>
-        /// <returns>All products.</returns>
         [HttpGet]
         [Route]
-        public IHttpActionResult GetAllProducts()
+        public IHttpActionResult GetAll()
         {
-            using (var umbracoContextReference = _umbracoContextFactory.EnsureUmbracoContext())
-            {
-                var rootContent = umbracoContextReference.UmbracoContext.Content.GetAtRoot();
+            var currentCulture = GetRequestedCulture();
+            var allProducts = _productService.GetAll(currentCulture);
 
-                var children = rootContent
-                    .FirstOrDefault()
-                    ?.Children<Models.ContentTypes.Products>()
-                    .FirstOrDefault()
-                    ?.Children<Models.ContentTypes.Product>()
-                    .Select(x => _umbracoMapper.Map<ProductSparse>(x));
-
-                return Ok(children);
-            }
+            return Ok(allProducts);
         }
 
-        /// <summary>
-        /// Get a product by it's id.
-        /// </summary>
-        /// <returns>The product.</returns>
+
         [HttpGet]
         [Route("{id:int}")]
-        public IHttpActionResult GetProductById(int id)
+        public IHttpActionResult GetById(int id)
         {
-            using (var umbracoContextReference = _umbracoContextFactory.EnsureUmbracoContext())
-            {
-                var rootContent = umbracoContextReference.UmbracoContext.Content.GetAtRoot();
+            var currentCulture = GetRequestedCulture();
+            var product = _productService.GetById(id, currentCulture);
 
-                var children = rootContent
-                    .FirstOrDefault()
-                    ?.Children<Models.ContentTypes.Products>()
-                    .FirstOrDefault()
-                    ?.Children<Models.ContentTypes.Product>()
-                    .Select(x => _umbracoMapper.Map<ProductSparse>(x));
-
-                return Ok(children);
-            }
+            return Ok(product);
         }
     }
 }
