@@ -4,8 +4,9 @@ namespace ProductApi.Exceptions
 {
     public class EntityNotFoundException : Exception
     {
-        public EntityNotFoundException()
+        public EntityNotFoundException(Type type)
         {
+            EntityType = type;
         }
 
         public EntityNotFoundException(string message)
@@ -17,5 +18,7 @@ namespace ProductApi.Exceptions
             : base(message, innerException)
         {
         }
+
+        public Type EntityType { get; }
     }
 }

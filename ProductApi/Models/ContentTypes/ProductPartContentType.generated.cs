@@ -21,25 +21,25 @@ using Umbraco.ModelsBuilder.Umbraco;
 namespace ProductApi.Models.ContentTypes
 {
 	/// <summary>Product Part</summary>
-	[PublishedModel("productPart")]
-	public partial class ProductPart : PublishedContentModel
+	[PublishedModel("productPartContentType")]
+	public partial class ProductPartContentType : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "productPart";
+		public new const string ModelTypeAlias = "productPartContentType";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ProductPart, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ProductPartContentType, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ProductPart(IPublishedContent content)
+		public ProductPartContentType(IPublishedContent content)
 			: base(content)
 		{ }
 

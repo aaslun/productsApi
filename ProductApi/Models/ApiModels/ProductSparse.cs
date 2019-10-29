@@ -1,6 +1,6 @@
-﻿namespace ProductApi.Models
+﻿namespace ProductApi.Models.ApiModels
 {
-    public class Product
+    public class ProductSparse
     {
         /// <summary>
         /// The id of the product.
@@ -8,18 +8,13 @@
         public int Id { get; set; }
 
         /// <summary>
-        /// The nema of the product.
+        /// The name of the product.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// The image for the product.
+        /// The product image.
         /// </summary>
         public string Image { get; set; }
-
-        /// <summary>
-        /// The description of the product.
-        /// </summary>
-        public string Description { get; set; }
     }
 }

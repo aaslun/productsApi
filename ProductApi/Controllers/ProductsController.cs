@@ -1,5 +1,5 @@
 ﻿using System.Web.Http;
-using ProductApi.Exceptions;
+using ProductApi.Models.ApiModels;
 using ProductApi.Services;
 
 namespace ProductApi.Controllers
@@ -31,21 +31,16 @@ namespace ProductApi.Controllers
             var currentCulture = GetRequestedCulture();
             var product = _productService.GetById(id, currentCulture);
 
-            if (product == null)
-            {
-                throw new EntityNotFoundException();
-            }
-
             return Ok(product);
         }
 
-        //[HttpPost]
-        //[Route("create")]
-        //public HttpResponseMessage Create(Product product)
-        //{
-        //    var response = _productService.Create(product);
+        [HttpPost]
+        [Route]
+        public IHttpActionResult Create(ProductPostData model)
+        {
+            var product = _productService.Create(model);
 
-        //    return Ok(response);
-        //}
+            return CreatedAtRoute(string.Empty, new { Id = product.Id }, product);
+        }
     }
 }

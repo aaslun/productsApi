@@ -15,9 +15,24 @@ namespace ProductApi.Attributes
                 throw new ArgumentNullException(nameof(context));
             }
 
-            if (context.Exception is EntityNotFoundException)
+            if (context.Exception is EntityNotFoundException entityNotFoundException)
             {
+                if (entityNotFoundException.EntityType != null)
+                {
+                    // TODO: log entityNotFoundException.EntityType + entityNotFoundException.Message
+                }
+                else
+                {
+                    // TODO: log entityNotFoundException.Message
+                }
+
                 context.Response = new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
+
+            if (context.Exception is BadRequestException badRequestException)
+            {
+                // TODO: log badRequestException.Message
+                context.Response = new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
         }
     }

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ProductApi.Models;
+using ProductApi.Models.ApiModels;
 
 namespace ProductApi.Services
 {
@@ -11,7 +11,7 @@ namespace ProductApi.Services
         /// <param name="id">The id of the product.</param>
         /// <param name="culture">The culture of the product.</param>
         /// <returns>The published product with all available product fields.</returns>
-        Models.Product GetById(int id, string culture);
+        Product GetById(int id, string culture);
 
         /// <summary>
         /// Get all products.
@@ -23,8 +23,8 @@ namespace ProductApi.Services
         /// <summary>
         /// Create new product.
         /// </summary>
-        /// <param name="product"></param>
-        /// <returns>Boolean true on created. False on failure.</returns>
-        Models.ContentTypes.Product Create(Models.ContentTypes.Product product);
+        /// <param name="model">The product data model to create from.</param>
+        /// <returns>The created product.</returns>
+        Product Create(ProductPostData model);
     }
 }
