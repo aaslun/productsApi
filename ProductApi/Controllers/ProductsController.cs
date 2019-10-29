@@ -7,6 +7,7 @@ namespace ProductApi.Controllers
     [RoutePrefix("api/products")]
     public class ProductsController : BaseController
     {
+        private const string GetByIdRouteName = "GetById";
         private readonly IProductService _productService;
 
         public ProductsController(IProductService productService)
@@ -25,7 +26,7 @@ namespace ProductApi.Controllers
         }
 
         [HttpGet]
-        [Route("{id:int}")]
+        [Route("{id:int}", Name = GetByIdRouteName)]
         public IHttpActionResult GetById(int id)
         {
             var currentCulture = GetRequestedCulture();
@@ -40,7 +41,7 @@ namespace ProductApi.Controllers
         {
             var product = _productService.Create(model);
 
-            return CreatedAtRoute(string.Empty, new { Id = product.Id }, product);
+            return CreatedAtRoute(GetByIdRouteName, new { Id = product.Id }, product);
         }
     }
 }
