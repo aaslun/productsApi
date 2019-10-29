@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="FDT" ToolsVersion="14.0">
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA0001" Action="None" /> <!-- XmlCommentAnalysisDisabled -->
+    <Rule Id="SA1101" Action="None" /> <!-- PrefixLocalCallsWithThis -->
+    <Rule Id="SA1309" Action="None" /> <!-- FieldNamesMustNotBeginWithUnderscore -->
+    <Rule Id="SA1600" Action="None" /> <!-- ElementsMustBeDocumented -->
+    <Rule Id="SA1601" Action="None" /> <!-- PartialElementsMustBeDocumented -->
+    <Rule Id="SA1602" Action="None" /> <!-- EnumerationItemsMustBeDocumented -->
+    <Rule Id="SA1623" Action="None" /> <!-- PropertySummaryDocumentationMustMatchAccessors -->
+    <Rule Id="SA1633" Action="None" /> <!-- FileMustHaveHeader -->
+  </Rules>
+</RuleSet>
