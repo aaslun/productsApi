@@ -25,6 +25,6 @@ namespace ProductApi.Services
         /// </summary>
         /// <param name="model">The product data model to create from.</param>
         /// <returns>The created product.</returns>
-        Product Create(ProductPostData model);
+        Product Create(ProductCreate model);
     }
 }

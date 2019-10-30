@@ -30,7 +30,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <CodeAnalysisRuleSet>../StyleCop.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>../ProductApi.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

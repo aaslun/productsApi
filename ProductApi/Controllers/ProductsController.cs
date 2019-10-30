@@ -4,10 +4,8 @@ using ProductApi.Services;
 
 namespace ProductApi.Controllers
 {
-    [RoutePrefix("api/products")]
     public class ProductsController : BaseController
     {
-        private const string GetByIdRouteName = "GetById";
         private readonly IProductService _productService;
 
         public ProductsController(IProductService productService)
@@ -16,7 +14,6 @@ namespace ProductApi.Controllers
         }
 
         [HttpGet]
-        [Route]
         public IHttpActionResult GetAll()
         {
             var currentCulture = GetRequestedCulture();
@@ -26,7 +23,6 @@ namespace ProductApi.Controllers
         }
 
         [HttpGet]
-        [Route("{id:int}", Name = GetByIdRouteName)]
         public IHttpActionResult GetById(int id)
         {
             var currentCulture = GetRequestedCulture();
@@ -36,12 +32,11 @@ namespace ProductApi.Controllers
         }
 
         [HttpPost]
-        [Route]
-        public IHttpActionResult Create(ProductPostData model)
+        public IHttpActionResult Create(ProductCreate model)
         {
             var product = _productService.Create(model);
 
-            return CreatedAtRoute(GetByIdRouteName, new { Id = product.Id }, product);
+            return CreatedAtRoute("ProductApi", new { Id = product.Id }, product);
         }
     }
 }

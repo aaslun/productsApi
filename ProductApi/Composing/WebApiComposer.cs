@@ -7,6 +7,7 @@ namespace ProductApi.Composing
     {
         public void Compose(Composition composition)
         {
+            // Disabled. See comment in WebApiComponent.cs for reason.
             composition.Components().Append<WebApiComponent>();
         }
     }
